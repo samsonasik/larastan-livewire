@@ -17,14 +17,14 @@ return Architecture::define()
     ->layer('MethodsTest', 'tests/Methods')
     ->layer('PropertiesTest', 'tests/Properties')
     ->ruleset([
-        'Errors'           => [],
-        'Methods'          => [],
-        'Properties'       => [],
-        'Fixtures'         => [],
+        'Errors' => [],
+        'Methods' => [],
+        'Properties' => [],
+        'Fixtures' => [],
         'IntegrationStubs' => [],
-        'Integration'      => ['IntegrationStubs'],
-        'MethodsTest'      => ['Methods', 'Fixtures'],
-        'PropertiesTest'   => ['Properties', 'Fixtures'],
+        'Integration' => ['IntegrationStubs'],
+        'MethodsTest' => ['Methods', 'Fixtures'],
+        'PropertiesTest' => ['Properties', 'Fixtures'],
     ])
     ->rule(
         'source_classes.must_be_final',
