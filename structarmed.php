@@ -11,20 +11,10 @@ return Architecture::define()
     ->layer('Errors', 'src/Errors')
     ->layer('Methods', 'src/Methods')
     ->layer('Properties', 'src/Properties')
-    ->layer('Fixtures', 'tests/Fixtures')
-    ->layer('IntegrationStubs', 'tests/Integration/stubs')
-    ->layer('Integration', 'tests/Integration', 'tests/Integration/stubs')
-    ->layer('MethodsTest', 'tests/Methods')
-    ->layer('PropertiesTest', 'tests/Properties')
     ->ruleset([
         'Errors' => [],
         'Methods' => [],
         'Properties' => [],
-        'Fixtures' => [],
-        'IntegrationStubs' => [],
-        'Integration' => ['IntegrationStubs'],
-        'MethodsTest' => ['Methods', 'Fixtures'],
-        'PropertiesTest' => ['Properties', 'Fixtures'],
     ])
     ->rule(
         'source_classes.must_be_final',
